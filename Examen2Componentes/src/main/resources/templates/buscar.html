@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar futbolista</title>
+</head>
+<body>
+<h1>Buscar Futbolistas</h1>
+<form action="#" th:action="@{/buscar}" th:object="${persona}" method="post">
+    <label for="name">Nombre</label>
+    <input type="text" th:field="*{nombre}" id="name">
+    <br>
+    <br>
+    <label for="apellido1">Primer apellido</label>
+    <input type="text" th:field="*{apellido1}" id="apellido1">
+    <br>
+    <br>
+    <input type="submit" value="Buscar">
+</form>
+<br>
+<br>
+<a href="/">Volver al inicio</a>
+
+
+
+
+
+</body>
+</html>

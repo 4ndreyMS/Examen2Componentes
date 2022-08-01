@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Futbolistas</title>
+</head>
+<body>
+<h1>Lista de Futbolistas</h1>
+<ul>
+  <div th:each="entry: ${lista}">
+    <li>
+      <strong>Futbolista:</strong> <span th:text="${entry.nombre}">Nombre</span>
+      <span th:text="${entry.apellido1}">Priemer apellido</span>
+      <span th:text="${entry.apellido2}">Segundo apellido</span>
+      <ul>
+        <li><a th:href="@{'/detalle/'+${entry.id}}">Ver datalle</a></li>
+        <li><a th:href="@{'/actualizar/'+${entry.id}}">Actualizar</a></li>
+        <li><a th:href="@{'/historico-imc/'+${entry.id}}">Histórico imc</a></li>
+      </ul>
+    </li>
+    <br>
+  </div>
+  <br>
+</ul>
+  <a href="/">Volver al inicio</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial de Imc</title>
+</head>
+<body>
+<h1>Historial de Imc del Futbolista</h1>
+<p>Historial del imc del fubolista <span th:text="${persona.getNombre()}">Nombre</span> <span th:text="${persona.getApellido1()}">Apellido</span> </p>
+<div th:each="entry: ${lista}">
+    <p> <strong>Medida Imc:</strong> <span th:text="${entry.getValor()}">Valor</span> <strong>Fecha del calculo: </strong><span th:text="${entry.getFechaCalculoImc()}"></p>
+
+</div>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

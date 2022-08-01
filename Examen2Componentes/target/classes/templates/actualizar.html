@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar</title>
+</head>
+<body>
+<h1>Actualizar información del fubolista</h1>
+
+Registrar articulo para la antologia:
+
+<p>Actualizar infomación del fubolista <span th:text="${persona.nombre}">Nombre</span> <span th:text="${persona.getApellido1()}">Apellido</span> </p>
+    <form action="#" th:action="@{/actualizar/{id}(id=${persona.id})}" th:object="${updPersona}" method="post" />
+        <label for="direccion">Dirección</label>
+        <input type="text" th:field="*{persona.direccion}" id="direccion">
+        <br>
+        <br>
+        <label for="provincia">Provincia</label>
+        <input type="text" th:field="*{persona.provincia}" id="provincia">
+        <br>
+        <br>
+        <label for="canton">Canton</label>
+        <input type="text" th:field="*{persona.canton}" id="canton">
+        <br>
+        <br>
+        <label for="distrito">Distrito</label>
+        <input type="text" th:field="*{persona.distrito}" id="distrito">
+        <br>
+        <br>
+        <label for="telefono">Teléfono</label>
+        <input type="text" th:field="*{persona.telefono}" id="telefono">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="text" th:field="*{persona.email}" id="email">
+        <br>
+        <br>
+        <label for="peso">Peso</label>
+        <input type="text" th:field="*{persona.peso}" id="peso">
+        <br>
+        <br>
+        <input type="submit" value="Actualizar">
+    </form>
+    <br>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

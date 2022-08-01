@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de Jugador</title>
+</head>
+<body>
+<h1>Detalle de jugador</h1>
+<ul>
+    <li><strong>Nombre:</strong> <span th:text="${persona.nombre}">Nombre</span></li>
+    <li><strong>Primer apellido:</strong> <span th:text="${persona.apellido1}">Primer apellido</span></li>
+    <li><strong>Segundo apellido: </strong> <span th:text="${persona.apellido2}">Segundo apellido2</span></li>
+    <li><strong>Email:</strong> <span th:text="${persona.email}">Email</span></li>
+    <li><strong>Telefono:</strong> <span th:text="${persona.telefono}">Telefono</span></li>
+    <li><strong>Rama: </strong> <span th:text="${persona.rama}">Rama</span></li>
+    <li><strong>Posición:</strong> <span th:text="${persona.posicion}">Posicion</span></li>
+    <li><strong>Dirección:</strong> <span th:text="${persona.direccion}">Direccion</span></li>
+    <li><strong>Provincia:</strong> <span th:text="${persona.provincia}">Provincia</span></li>
+    <li><strong>Canton:</strong> <span th:text="${persona.canton}">Canton</span></li>
+    <li><strong>Distrito:</strong> <span th:text="${persona.distrito}">Distrito</span></li>
+    <li><strong>Altura:</strong> <span th:text="${persona.altura}">Altura</span></li>
+    <li><strong>Peso:</strong> <span th:text="${persona.peso}">Peso</span></li>
+    <li><strong>Imc:</strong> <span th:text="${persona.ultimoValor}">Imc</span></li>
+    <li><strong>Fecha Imc:</strong> <span th:text="${persona.fechaUltimoValor}">fecha Nacimiento</span></li>
+    <li><strong>Nacimiento:</strong> <span th:text="${persona.fechaNacimiento}">fecha Nacimiento</span></li>
+
+</ul>
+<a href="/">Volver al inicio</a>
+</body>
+</html>
